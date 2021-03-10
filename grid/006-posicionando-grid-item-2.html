@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Posicionando Grid Items - Parte 2</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css" media="screen">
+			.container {
+				color: #fff;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(3, 100px);
+			}	
+			.item {
+				background-color: firebrick;
+				color: #fff;
+				padding: 1rem;
+			}		
+			.item:nth-child(even){
+				background-color: tomato;
+			}
+			.item:nth-child(1){
+				grid-column: 2 ;
+			}
+			.item:nth-child(2){
+				grid-column: 1;
+			}
+			.item:nth-child(3){
+				grid-column: 2/ span 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>			
+			<div class="item">5</div>
+			<div class="item">6</div>
+			<div class="item">7</div>
+			<div class="item">8</div>
+		</div>
+	</body>
+</html>		
